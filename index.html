@@ -1,12 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Helioviewer is down for maintenance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Helioviewer.org — Maintenance</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html, body {
+        height: 100%;
+        background-color: #000;
+        color: #fff;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+                     Helvetica, Arial, sans-serif;
+        font-weight: 200;
+      }
+
+      /* ── Header (mirrors hv-header) ── */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3em;
+        display: flex;
+        align-items: center;
+        padding: 0 1em;
+        background: linear-gradient(
+          rgba(0,0,0,0.75), rgba(0,0,0,0.5),
+          rgba(0,0,0,0.5),  rgba(0,0,0,0.75));
+        box-shadow: 1pt 1pt 4pt -1pt rgba(255,255,255,0.75);
+        z-index: 10;
+      }
+
+      #logo {
+        display: flex;
+        align-items: center;
+        gap: 0.45em;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      #logo img {
+        width: 1.7em;
+        height: 1.7em;
+        flex-shrink: 0;
+      }
+
+      #logo span {
+        font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light",
+                     "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 1.5em;
+        letter-spacing: 0.01em;
+      }
+
+      /* ── Main content ── */
+      main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5em 1.5em 2em;
+        text-align: center;
+      }
+
+
+      h1 {
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+        font-weight: 300;
+        margin-bottom: 0.6em;
+        color: #fff;
+      }
+
+      h1 strong {
+        font-weight: 400;
+      }
+
+      p {
+        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+        color: #e8e8e8;
+        max-width: 36em;
+        line-height: 1.65;
+        margin-bottom: 0.8em;
+      }
+
+      .alt-link {
+        display: inline-block;
+        margin-top: 1.4em;
+        padding: 0.55em 1.4em;
+        border: 1px solid rgba(255,255,255,0.4);
+        border-radius: 4px;
+        color: #e8e8e8;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 1rem;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+      }
+
+      .alt-link:hover {
+        background-color: rgba(255,255,255,0.08);
+        border-color: #d18f61;
+        color: #d18f61;
+      }
+
+      footer {
+        margin-top: 3em;
+        font-size: 0.8rem;
+        color: #858585;
+      }
+
+      footer a {
+        color: #858585;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        color: #d18f61;
+      }
+    </style>
   </head>
-  <body style="font-family: Arial, Helvetica, sans-serif;">
-    <h1 style="font-size: 2.3em;">Helioviewer.org is currently down for maintenance.</h1>
-    <h2>We apologize for the inconvenience and will return as soon as possible.</h2>
-    <h2>As an alternative, please consider using the Helioviewer web client at <A href="https://helioviewer.ias.u-psud.fr/">https://helioviewer.ias.u-psud.fr/</A>.</h2>
+  <body>
+
+    <header>
+      <a id="logo" href="https://helioviewer.org" title="Helioviewer.org — The Open-Source Solar and Heliospheric Data Browser">
+        <img src="hvlogo.png" alt="Helioviewer logo"/>
+        <span>Helioviewer.org</span>
+      </a>
+    </header>
+
+    <main>
+      <h1>Helioviewer.org is currently down for <strong>maintenance</strong>.</h1>
+      <p>In the meantime, you can browse solar and heliospheric data using the
+         Helioviewer client hosted at IAS:</p>
+
+      <div style="display: flex; gap: 1em; justify-content: center; flex-wrap: wrap; margin-top: 1.4em;">
+        <a class="alt-link" style="margin-top: 0;" href="https://helioviewer-project.github.io/2026/03/05/building-move">
+          More Info
+        </a>
+        <a class="alt-link" style="margin-top: 0;" href="https://helioviewer.ias.u-psud.fr/">
+          helioviewer.ias.u-psud.fr
+        </a>
+      </div>
+
+      <footer>
+        <p>&copy; <a href="https://helioviewer.org">The Helioviewer Project</a></p>
+      </footer>
+    </main>
+
   </body>
 </html>
